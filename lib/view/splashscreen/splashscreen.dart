@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:netflixui/utils/colorsdb.dart';
-import 'package:netflixui/view/homescreen/homescreen.dart';
+import 'package:netflixui/view/homescreen/userscreen.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -17,7 +17,7 @@ class _SplashState extends State<Splash> {
     super.initState();
     Timer(Duration(seconds: 3), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => Homescreen()));
+          context, MaterialPageRoute(builder: (context) => Userscreen()));
     });
   }
 

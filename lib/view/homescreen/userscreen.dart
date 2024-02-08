@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:netflixui/utils/colorsdb.dart';
 import 'package:netflixui/utils/db.dart';
 
-class Homescreen extends StatefulWidget {
-  const Homescreen({super.key});
+class Userscreen extends StatefulWidget {
+  const Userscreen({super.key});
 
   @override
-  State<Homescreen> createState() => _HomescreenState();
+  State<Userscreen> createState() => _UserscreenState();
 }
 
-class _HomescreenState extends State<Homescreen> {
+class _UserscreenState extends State<Userscreen> {
   int selindex = 0;
   @override
   Widget build(BuildContext context) {
@@ -17,9 +17,13 @@ class _HomescreenState extends State<Homescreen> {
       backgroundColor: Clrbase.nblack,
       appBar: AppBar(
         backgroundColor: Clrbase.nblack,
-        title: Image.asset(
-          "assets/logos_netflix.png",
-          height: 60,
+        title: SizedBox(
+          height: 38,
+          width: 138,
+          child: Image.asset(
+            "assets/logos_netflix.png",
+            height: 60,
+          ),
         ),
         centerTitle: true,
         actions: [
@@ -32,7 +36,7 @@ class _HomescreenState extends State<Homescreen> {
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: GridView.builder(
-          itemCount: DbData.usernameImages.length + 1,
+          itemCount: DbData.usernameImages.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2, crossAxisSpacing: 5, mainAxisSpacing: 5),
           itemBuilder: (context, index) => Column(
@@ -42,7 +46,6 @@ class _HomescreenState extends State<Homescreen> {
                 width: 100,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.amber,
                     image: DecorationImage(
                         image:
                             AssetImage(DbData.usernameImages[index]["image"]!),
