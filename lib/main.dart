@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:netflixui/view/splashscreen/splashscreen.dart';
+import 'package:netflixui/view/navbar/navbar.dart';
+//import 'package:netflixui/view/splashscreen/splashscreen.dart';
 
 void main() {
   runApp(Netflix());
@@ -12,7 +13,7 @@ class Netflix extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Splash(),
+      home: NavBar(),
     );
   }
 }

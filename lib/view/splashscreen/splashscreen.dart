@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:netflixui/utils/colorsdb.dart';
-import 'package:netflixui/view/homescreen/userscreen.dart';
+import 'package:netflixui/view/userscreen/userscreen.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
