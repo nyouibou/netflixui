@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:netflixui/utils/colorsdb.dart';
 import 'package:netflixui/view/homescreen/homescreen.dart';
 
 class NavBar extends StatefulWidget {
@@ -16,6 +17,7 @@ class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Clrbase.nblack,
       body: screens[selectedindex], //used to apply screens
       bottomNavigationBar: BottomNavigationBar(
           onTap: (value) {
