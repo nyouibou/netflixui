@@ -9,15 +9,19 @@ class CustomMovieCards extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             title,
-            style:
-                TextStyle(color: Clrbase.nwhite, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: Clrbase.nwhite,
+                fontWeight: FontWeight.bold,
+                fontSize: 25),
           ),
           SizedBox(
             height: 200,
             child: ListView.builder(
+                scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) => Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
