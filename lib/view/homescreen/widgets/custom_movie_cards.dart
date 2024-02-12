@@ -15,6 +15,18 @@ class CustomMovieCards extends StatelessWidget {
             style:
                 TextStyle(color: Clrbase.nwhite, fontWeight: FontWeight.bold),
           ),
+          SizedBox(
+            height: 200,
+            child: ListView.builder(
+                itemBuilder: (context, index) => Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: 200,
+                        width: 100,
+                        color: Clrbase.nred,
+                      ),
+                    )),
+          )
         ],
       ),
     );
