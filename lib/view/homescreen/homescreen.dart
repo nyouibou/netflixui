@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:netflixui/utils/colorsdb.dart';
+import 'package:netflixui/utils/db.dart';
 import 'package:netflixui/utils/imageconstant.dart';
 import 'package:netflixui/view/homescreen/widgets/custom_movie_cards.dart';
 
@@ -133,10 +134,28 @@ class _HomescreenState extends State<Homescreen> {
           SizedBox(
             height: 10,
           ),
-          CustomMovieCards(title: "Preview"),
-          CustomMovieCards(title: "Continue Watching for Eve"),
-          CustomMovieCards(title: "Popular on Netflix"),
-          CustomMovieCards(title: "Preview"),
+          CustomMovieCards(
+            height: 100,
+            width: 100,
+            title: "Preview",
+            isCircular: true,
+            imagesList: DbData.movieImageUrls1,
+          ),
+          CustomMovieCards(
+            title: "Continue Watching for ",
+            imagesList: DbData.movieImageUrls1,
+            isOptionsVisible: true,
+          ),
+          CustomMovieCards(
+            height: 251,
+            width: 154,
+            title: "Continue Watching for ",
+            imagesList: DbData.movieImageUrls2,
+          ),
+          CustomMovieCards(
+            title: "Continue Watching for ",
+            imagesList: DbData.movieImageUrls1,
+          ),
         ],
       ),
     );
