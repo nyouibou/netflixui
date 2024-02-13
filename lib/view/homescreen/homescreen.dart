@@ -142,18 +142,18 @@ class _HomescreenState extends State<Homescreen> {
             imagesList: DbData.movieImageUrls1,
           ),
           CustomMovieCards(
-            title: "Continue Watching for ",
+            title: "Continue Watching for Eve",
             imagesList: DbData.movieImageUrls1,
             isOptionsVisible: true,
           ),
           CustomMovieCards(
             height: 251,
             width: 154,
-            title: "Continue Watching for ",
+            title: "Popular on Netflix",
             imagesList: DbData.movieImageUrls2,
           ),
           CustomMovieCards(
-            title: "Continue Watching for ",
+            title: "Trending Now",
             imagesList: DbData.movieImageUrls1,
           ),
         ],
