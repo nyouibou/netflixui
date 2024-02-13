@@ -29,4 +29,41 @@ class DbData {
     "https://i.pinimg.com/564x/aa/92/13/aa92130b5dcbb96bd933c40ae7d798e2.jpg",
     "https://i.pinimg.com/564x/5f/c5/7d/5fc57db5a5194c2eadb610955d389ea5.jpg"
   ];
+  static List<Map<String, String>> searchScreenDatas = [
+    {
+      "imageUrl":
+          "https://i.pinimg.com/474x/e8/e7/a2/e8e7a2ab4bbd0a540d21dc52da2a540f.jpg",
+      "movieName": "Avatar"
+    },
+    {
+      "imageUrl":
+          "https://i.pinimg.com/474x/a8/09/1a/a8091accb13f85a7b87845618af1aa82.jpg",
+      "movieName": "Free Guy"
+    },
+    {
+      "imageUrl":
+          "https://i.pinimg.com/474x/18/d7/4e/18d74ef46e722828f75cca91b009f4a5.jpg",
+      "movieName": "The Matrix"
+    },
+    {
+      "imageUrl":
+          "https://i.pinimg.com/474x/37/91/15/3791158917f87b63c46b976e25e337a7.jpg",
+      "movieName": "Django Unchained"
+    },
+    {
+      "imageUrl":
+          "https://i.pinimg.com/474x/be/61/43/be6143fa03b5304ce448467b6d44307e.jpg",
+      "movieName": "Tron"
+    },
+    {
+      "imageUrl":
+          "https://i.pinimg.com/474x/6a/e0/75/6ae07585d85dd08be9267a0229d1e749.jpg",
+      "movieName": "American Psycho"
+    },
+    {
+      "imageUrl":
+          "https://i.pinimg.com/474x/cf/c8/99/cfc899bbb210026bcb64c32ce80dd9ac.jpg",
+      "movieName": "Fight Club"
+    },
+  ];
 }
