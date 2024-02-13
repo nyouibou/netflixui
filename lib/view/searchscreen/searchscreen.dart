@@ -23,7 +23,7 @@ class _SearchscreenState extends State<Searchscreen> {
             child: Row(
               children: [
                 Icon(Icons.search_rounded),
-                Text("SEARCH"),
+                Text("Search for a show, movie, genre, e.t.c."),
                 Spacer(),
                 Icon(Icons.mic),
               ],
