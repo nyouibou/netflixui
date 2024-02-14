@@ -22,17 +22,18 @@ class _SearchscreenState extends State<Searchscreen> {
             color: Clrbase.ngrey,
             child: Row(
               children: [
-                Icon(Icons.search_rounded),
-                Text("Search for a show, movie, genre, e.t.c."),
+                Icon(Icons.search_rounded, color: Clrbase.nwt),
+                Text("Search for a show, movie, genre, e.t.c.",
+                    style: TextStyle(color: Clrbase.nwt)),
                 Spacer(),
-                Icon(Icons.mic),
+                Icon(Icons.mic, color: Clrbase.nwt),
               ],
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0),
             child: Text(
-              "SEARCH",
+              "Top Searches",
               style: TextStyle(
                   color: Clrbase.nwhite,
                   fontWeight: FontWeight.bold,
