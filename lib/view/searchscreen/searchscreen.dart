@@ -18,11 +18,14 @@ class _SearchscreenState extends State<Searchscreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             color: Clrbase.ngrey,
             child: Row(
               children: [
                 Icon(Icons.search_rounded, color: Clrbase.nwt),
+                SizedBox(
+                  width: 10,
+                ),
                 Text("Search for a show, movie, genre, e.t.c.",
                     style: TextStyle(color: Clrbase.nwt)),
                 Spacer(),

@@ -66,4 +66,20 @@ class DbData {
       "movieName": "Fight Club"
     },
   ];
+  static List<Map<String, String>> epScreendata = [
+    {
+      "imageUrl":
+          "https://i.pinimg.com/474x/e8/e7/a2/e8e7a2ab4bbd0a540d21dc52da2a540f.jpg",
+      "epName": "Soul Navi",
+      "movieName": "Avatar",
+      "Date": "Nov 8",
+    },
+    {
+      "imageUrl":
+          "https://i.pinimg.com/474x/e8/e7/a2/e8e7a2ab4bbd0a540d21dc52da2a540f.jpg",
+      "epName": "Soul Navi",
+      "movieName": "Avatar",
+      "Date": "Nov 8",
+    },
+  ];
 }
