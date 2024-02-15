@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:netflixui/utils/colorsdb.dart';
 import 'package:netflixui/utils/db.dart';
 import 'package:netflixui/view/comingsoonscreen/widgets/newepscreen.dart';
-import 'package:netflixui/view/comingsoonscreen/widgets/upcomingmovies.dart';
 
 class ComingsoonScreen extends StatefulWidget {
   const ComingsoonScreen({super.key});
@@ -15,44 +14,39 @@ class _ComingsoonScreenState extends State<ComingsoonScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Clrbase.nblack,
-      appBar: AppBar(
         backgroundColor: Clrbase.nblack,
-        leading: Center(
-          child: CircleAvatar(
+        appBar: AppBar(
+          backgroundColor: Clrbase.nblack,
+          leading: CircleAvatar(
             radius: 15,
             backgroundColor: Clrbase.nred,
             child: Icon(
               Icons.notifications,
               color: Clrbase.nwhite,
+              size: 20,
             ),
           ),
-        ),
-        title: Text(
-          "Notifications",
-          style: TextStyle(
-              fontSize: 20, fontWeight: FontWeight.bold, color: Clrbase.nwhite),
-        ),
-      ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                color: Clrbase.ngrey,
-                child: ListView.separated(
-                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-                  shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  itemCount: DbData.epScreendata.length,
-                  itemBuilder: (context, index) => Upcomingscreen(),
-                  separatorBuilder: (context, index) => SizedBox(height: 10),
-                ),
-              )
-            ],
+          title: Text(
+            "Notifications",
+            style:
+                TextStyle(color: Clrbase.nwhite, fontWeight: FontWeight.bold),
           ),
         ),
-      ),
-    );
+        body: SafeArea(
+          child: Container(
+            child: ListView.separated(
+              itemCount: DbData.epScreendata.length,
+              itemBuilder: (context, index) => NewepScreen(
+                imageUrl: DbData.epScreendata[index]["imageUrl"].toString(),
+                title: DbData.epScreendata[index]["epName"].toString(),
+                subtitle: DbData.epScreendata[index]["movieName"].toString(),
+                date: DbData.epScreendata[index]["Date"].toString(),
+              ),
+              separatorBuilder: (context, index) => SizedBox(
+                height: 0,
+              ),
+            ),
+          ),
+        ));
   }
 }
