@@ -4,7 +4,16 @@ import 'package:flutter/material.dart';
 import 'package:netflixui/utils/colorsdb.dart';
 
 class UpcomingMovies extends StatelessWidget {
-  const UpcomingMovies({super.key});
+  const UpcomingMovies(
+      {super.key,
+      required this.title,
+      required this.subtitle,
+      required this.imageurl,
+      required this.des});
+  final String title;
+  final String subtitle;
+  final String imageurl;
+  final String des;
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +25,7 @@ class UpcomingMovies extends StatelessWidget {
             height: 200,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: NetworkImage(
-                        "https://images.pexels.com/photos/17216968/pexels-photo-17216968/free-photo-of-sitting-in-chair-man-admiring-idyllic-landscape.jpeg?auto=compress&cs=tinysrgb&w=600"),
-                    fit: BoxFit.cover)),
+                    image: NetworkImage(imageurl), fit: BoxFit.cover)),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
@@ -71,7 +78,7 @@ class UpcomingMovies extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Season 1 Coming Soon",
+                  subtitle,
                   style: TextStyle(
                     fontWeight: FontWeight.normal,
                     fontSize: 11,
@@ -82,7 +89,7 @@ class UpcomingMovies extends StatelessWidget {
                   height: 10,
                 ),
                 Text(
-                  "lost in the jungle",
+                  title,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -93,7 +100,7 @@ class UpcomingMovies extends StatelessWidget {
                   height: 10,
                 ),
                 Text(
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis odio at metus malesuada, a accumsan arcu blandit. Proin gravida blandit nunc, at tristique mauris consequat id. Pellentesque tincidunt a leo in faucibus. Praesent sed mattis libero, in molestie nulla. Sed ornare tellus non vehicula suscipit. Praesent lobortis pretium elit, sed ultricies magna tristique nec. Fusce vitae arcu eleifend, lacinia leo at, auctor nulla.",
+                  des,
                   maxLines: 3,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(

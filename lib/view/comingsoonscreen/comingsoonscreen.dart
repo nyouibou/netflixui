@@ -45,10 +45,15 @@ class _ComingsoonScreenState extends State<ComingsoonScreen> {
             ),
             // 2nd
             ListView.builder(
-                itemCount: 1,
+                itemCount: DbData.notificationMovieList.length,
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
-                itemBuilder: (context, index) => UpcomingMovies())
+                itemBuilder: (context, index) => UpcomingMovies(
+                      title: DbData.notificationMovieList[index]["title"],
+                      subtitle: DbData.notificationMovieList[index]["subtitle"],
+                      imageurl: DbData.notificationMovieList[index]["imageUrl"],
+                      des: DbData.notificationMovieList[index]["description"],
+                    ))
           ],
         ),
       ),
