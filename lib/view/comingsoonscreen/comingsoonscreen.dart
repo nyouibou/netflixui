@@ -18,7 +18,7 @@ class _ComingsoonScreenState extends State<ComingsoonScreen> {
       backgroundColor: Clrbase.nblack,
       appBar: AppBar(
         backgroundColor: Clrbase.nblack,
-        leading: Icon(Icons.notifications, color: Colors.red),
+        leading: Icon(Icons.notifications, color: Clrbase.nwhite),
         title: Text("Notifications",
             style: TextStyle(color: Clrbase.nwt, fontWeight: FontWeight.bold)),
       ),
