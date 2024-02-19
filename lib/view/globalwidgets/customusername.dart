@@ -7,7 +7,8 @@ class CustomUsername extends StatelessWidget {
       required this.height,
       required this.width,
       required this.imgUrl,
-      required this.titles});
+      required this.titles,
+      required String username});
   final double height;
   final double width;
   final String imgUrl;
